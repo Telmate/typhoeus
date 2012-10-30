@@ -49,7 +49,7 @@ else
     abort "need libcurl"
   end
 end
-
+dir_config('curl')
 if Config::CONFIG['target_os'] == 'mingw32'
   find_library('curl', 'curl_easy_init',
                File.join(ROOT, 'cross', 'curl-7.19.4.win32', 'bin'))
